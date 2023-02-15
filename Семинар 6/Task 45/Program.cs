@@ -8,6 +8,7 @@ int[] array1=FillArr(num);
 Console.WriteLine($"{(String.Join(" ",array1))}");
 int[] arrayCopy=CopyArr(array1);
 Console.WriteLine($"{(String.Join(" ",arrayCopy))}");
+Console.WriteLine($"{(String.Join(" ",ExArr(array1,arrayCopy)))}");
 
 int Input(string message)
 {
@@ -36,4 +37,13 @@ int [] CopyArr(int[] array)
     return copyArray;
 }
 
+int [] ExArr(int[] array, int[] array2)
+{
+    int[] array3=new int[array.Length];
+    for (int i = 0; i < array3.Length; i++)
+    {
+        array3[i]=array1[i]*array2[i];
+    }
+    return array3;
+}
 
